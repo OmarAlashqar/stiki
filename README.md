@@ -1,5 +1,10 @@
 # Stiki
 
+This web app is deployed on Firebase Hosting.  
+Check it out [**here**](https://stiki-notes.firebaseapp.com)
+
+# Angular CLI Help
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.4.
 
 ## Development server
