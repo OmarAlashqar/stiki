@@ -1,31 +1,45 @@
 # Stiki
 
-This web app is deployed on Firebase Hosting.  
+Stiki is a web app that keeps your notes somewhere you can always access.  
+It's a CRUD application that utilizes Google's **Firebase** Real-time database to store all your notes. It uses **Angular** as a front-end framework for templating and three-way data binding.
+
+Thanks, Firebase, for hosting this web app!  
 Check it out [**here**](https://stiki-notes.firebaseapp.com)
 
 # Angular CLI Help
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.4.
 
-## Development server
+## Building this project
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+If you want to build this project, make sure you have `nodeJS` and `npm` installed.
 
-## Code scaffolding
+Start by installing Angular, the framework used in this project.
+```
+npm install -g angular
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Next, install AngularFire and Firebase, which is the layer that deals with the Real-time Database. Make sure you're in the project root directory. The `--save` flag makes sure that they're added as dependencies to the project.
 
-## Build
+```
+npm install angular-fire firebase --save
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+I also recommend installing the Angular CLI. This allows you to build components and services with ease.
+```
+npm install -g angular-cli
+```
 
-## Running unit tests
+Now, you can build the project with an optional `--prod` flag for production.
+```
+ng build [--prod]
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+or serve it, which will host a server on `http://localhost:4200/`
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+ng serve
+```
 
 ## Further help
 
