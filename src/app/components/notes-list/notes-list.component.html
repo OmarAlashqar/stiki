@@ -1,0 +1,21 @@
+ <div class="notes-wrapper">
+   <h1>Notes</h1>
+   <div class="notes-grid">
+
+     <div class="note" [style.background-color]="note.color" *ngFor="let note of notes | async">
+       <h3>{{note.title}}</h3>
+       <p>{{note.description}}</p>
+
+       <div class="controls">
+         <div class="colors">
+           <div class="color" (click)="changeColor(note, color)" [style.background-color]="color" *ngFor="let color of colors"></div>
+         </div>
+         <i class="delete material-icons" (click)="deleteNote(note)" [style.color]="note.color">delete</i>
+       </div>
+     </div>
+     <div class="note add" (click)="createNote()">
+       <i class="material-icons">add</i>
+     </div>
+
+   </div>
+ </div>

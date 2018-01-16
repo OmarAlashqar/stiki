@@ -1,0 +1,77 @@
+@import 'src/styles.sass'
+
+.notes-wrapper
+  width: 100%
+  margin: 30px auto
+  padding: 20px
+  // background-color: #ccc
+
+h1
+  color: $gray
+  font-weight: 300
+
+.notes-grid
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: flex-start
+
+  > .note
+    // padding: 0px 20px 10px
+    flex: auto auto;
+    margin: 20px
+    max-width: 200px
+
+.controls
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin: auto
+  width: 100%
+  background-color: rgba(0, 0, 0, 0.1)
+  padding: 5px 20px
+  > .delete
+    transition: box-shadow 0.25s
+    background-color: white
+    border-radius: 100px
+    padding: 3px
+    &:hover
+      box-shadow: 0 0 15px 0 white
+      cursor: pointer
+
+  > .colors
+    display: flex
+
+    > .color
+      transition: box-shadow 0.25s
+      width: 25px
+      height: 25px
+      border: 1px solid white
+      border-radius: 100px
+      margin: 5px
+      &:hover
+        box-shadow: 0 0 15px 0 white
+        cursor: pointer
+
+
+h3
+  color: $dark
+  margin: 20px 20px 15px
+
+p
+  color: $dark
+  margin: 0px 20px 20px
+
+.add
+  transition: background-color 0.25s
+  width: 200px
+  padding: 40px
+  text-align: center
+  &:hover
+    background-color: #ddd
+    cursor: pointer
+  > i
+    border-radius: 100px
+    color: $gray
+    padding: 5px
+    border: 3px solid $gray
