@@ -9,11 +9,13 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AppComponent } from './app.component';
 import { NotesListComponent } from './components/notes-list/notes-list.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotesListComponent
+    NotesListComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

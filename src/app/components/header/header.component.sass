@@ -1,0 +1,26 @@
+@import 'src/styles.sass'
+
+.header-wrapper
+  width: 80%
+  margin: 70px auto 70px
+  background-color: tomato
+  box-shadow: 0 0 50px -10px gray
+
+  display: flex
+
+.image
+  background-image: url('../../../assets/forest.jpg')
+  background-size: cover
+  width: 80%
+
+.feature
+  transition: ease 1s
+  font-weight: bold
+  color: $light
+  font-size: 60px
+  padding: 20px
+  user-select: none
+  &:hover
+    background-color: $accent
+    padding-left: 70px
+    box-shadow: 0 0 50px -10px gray
