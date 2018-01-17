@@ -2,9 +2,10 @@
    <h1>Notes</h1>
    <div class="notes-grid">
 
-     <div class="note" [style.background-color]="note.color" *ngFor="let note of notes | async">
-       <h3>{{note.title}}</h3>
-       <p>{{note.description}}</p>
+     <div class="note" [style.background-color]="note.color" *ngFor="let note of (notes | async)">
+       <!-- <h3>{{note.title}}</h3> -->
+       <div class="input title" contenteditable="true" [style.background-color]="note.color" [ngModel]='(note.title)' (ngModelChange)="updateTitle(note, $event)"></div>
+       <div class="input description" contenteditable="true" [style.background-color]="note.color" [ngModel]='(note.description)' (ngModelChange)="updateDescription(note, $event)"></div>
 
        <div class="controls">
          <div class="colors">

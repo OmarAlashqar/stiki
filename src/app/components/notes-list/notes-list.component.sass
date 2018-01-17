@@ -20,7 +20,9 @@ h1
     transition: ease-out 0.25s
     flex: auto auto;
     margin: 20px
-    max-width: 200px
+    min-width: 200px
+    max-width: 300px
+    height: auto
 
 .controls
   display: flex
@@ -54,14 +56,24 @@ h1
         box-shadow: 0 0 15px 0 white
         cursor: pointer
 
-
-h3
+.title
+  font-weight: 900
+  font-size: 1.3em
   color: $dark
-  margin: 20px 20px 15px
+  padding: 20px 20px 10px
 
-p
-  color: $dark
-  margin: 0px 20px 20px
+.description
+  padding: 5px 20px 15px
+
+.input
+  transition: filter 1s
+  border: none
+  outline: none
+  width: 100%
+  overflow: visible
+  resize: none
+  &:hover, &:focus
+    filter: brightness(90%)
 
 .add
   transition: background-color 0.25s

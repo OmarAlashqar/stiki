@@ -17,9 +17,11 @@ export class NotesListComponent implements OnInit {
   notesRef: AngularFireList<any>;
   notes: Observable<any[]>;
 
-  constructor(private db: AngularFireDatabase) {
-    this.notesRef = db.list('/notes')
-    this.notes = this.notesRef.snapshotChanges().map(changes => {
+  constructor(private db: AngularFireDatabase) {}
+
+  ngOnInit() {
+    this.notesRef = this.db.list('/notes')
+    this.notes = this.notesRef.snapshotChanges(['child_added', 'child_removed']).map(changes => {
       return changes.map(c => ({
         key: c.payload.key,
         ...c.payload.val()
@@ -27,30 +29,31 @@ export class NotesListComponent implements OnInit {
     })
 
     this.colors = colors
-
-    // this.db.list('/notes').remove()
-  }
-
-  ngOnInit() {
-    this.notes.forEach(item => {
-      console.log(item)
-    })
   }
 
   createNote(){
-    this.db.list('/notes').push({
+    this.notesRef.push({
       title: 'Title here',
       description: 'Description here',
       color: 'tomato'
     })
   }
 
+  updateTitle(note, title){
+    this.notesRef.update(note.key, {title: title})
+  }
+
+  updateDescription(note, description){
+    this.notesRef.update(note.key, {description: description})
+  }
+
   changeColor(note, color){
     note.color = color
+    this.notesRef.update(note.key, {color: color})
   }
 
   deleteNote(note){
-    this.db.list('notes').remove(note.key)
+    this.notesRef.remove(note.key)
   }
 
 }

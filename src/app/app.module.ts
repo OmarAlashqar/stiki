@@ -11,11 +11,14 @@ import { AppComponent } from './app.component';
 import { NotesListComponent } from './components/notes-list/notes-list.component';
 import { HeaderComponent } from './components/header/header.component';
 
+import { ContenteditableDirective } from 'ng-contenteditable';
+
 @NgModule({
   declarations: [
     AppComponent,
     NotesListComponent,
-    HeaderComponent
+    HeaderComponent,
+    ContenteditableDirective
   ],
   imports: [
     BrowserModule,
