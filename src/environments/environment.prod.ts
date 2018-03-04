@@ -1,5 +1,5 @@
 export const environment = {
-  production: false,
+  production: true,
   firebase: {
     apiKey: "AIzaSyBo1vlTfOPhfE8jvK8WGErwqMZXAZG7yVY",
     authDomain: "stiki-notes.firebaseapp.com",

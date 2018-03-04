@@ -9,6 +9,8 @@
 h1
   color: $gray
   font-weight: 300
+  text-align: center
+  user-select: none
 
 .notes-grid
   display: flex
@@ -16,7 +18,7 @@ h1
   justify-content: center
   align-items: flex-start
 
-  > .note
+  .note
     transition: ease-out 0.25s
     flex: auto auto;
     margin: 20px
@@ -25,66 +27,71 @@ h1
     height: auto
 
 .controls
-  display: flex
-  justify-content: space-between
-  align-items: center
-  margin: auto
-  width: 100%
-  background-color: rgba(0, 0, 0, 0.1)
-  padding: 5px 20px
-  > .delete
-    transition: box-shadow 0.25s
-    transition: background-color
-    background-color: white
-    border-radius: 100px
-    padding: 3px
-    &:hover
-      box-shadow: 0 0 15px 0 white
-      cursor: pointer
-
-  > .colors
+    user-select: none
     display: flex
+    justify-content: space-between
+    align-items: center
+    margin: auto
+    width: 100%
+    background-color: rgba(0, 0, 0, 0.1)
+    padding: 5px 20px
+    .delete
+        transition: box-shadow 0.25s
+        transition: background-color
+        background-color: white
+        border-radius: 100px
+        padding: 3px
+        &:hover
+            box-shadow: 0 0 15px 0 white
+            cursor: pointer
 
-    > .color
-      transition: box-shadow 0.25s
-      width: 25px
-      height: 25px
-      border: 1px solid white
-      border-radius: 100px
-      margin: 5px
-      &:hover
-        box-shadow: 0 0 15px 0 white
-        cursor: pointer
+    .colors
+        display: flex
+
+    .color
+        transition: box-shadow 0.25s
+        width: 25px
+        height: 25px
+        border: 1px solid white
+        border-radius: 100px
+        margin: 5px
+        &:hover
+            box-shadow: 0 0 15px 0 white
+            cursor: pointer
 
 .title
-  font-weight: 900
-  font-size: 1.3em
-  color: $dark
-  padding: 20px 20px 10px
+    font-weight: 900
+    font-size: 1.3em
+    color: $dark
+    padding: 20px 20px 10px
 
 .description
-  padding: 5px 20px 15px
+    padding: 5px 20px 15px
 
 .input
-  transition: filter 1s
-  border: none
-  outline: none
-  width: 100%
-  overflow: visible
-  resize: none
-  &:hover, &:focus
-    filter: brightness(90%)
+    transition: filter 1s
+    border: none
+    outline: none
+    width: 100%
+    overflow: visible
+    resize: none
+    &:hover, &:focus
+        filter: brightness(90%)
 
 .add
-  transition: background-color 0.25s
-  width: 200px
-  padding: 40px
-  text-align: center
-  &:hover
-    background-color: #ddd
-    cursor: pointer
-  > i
-    border-radius: 100px
-    color: $gray
-    padding: 5px
-    border: 3px solid $gray
+    user-select: none
+    transition: background-color 0.25s
+    width: 200px
+    padding: 40px
+    text-align: center
+    &:hover
+        background-color: #ddd
+        cursor: pointer
+        i
+            transform: rotate(90deg)
+    i
+        border-radius: 100px
+        color: $gray
+        padding: 5px
+        border: 3px solid $gray
+        transition: 0.25s ease

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
 
-import { colors } from '../common/colors'
+import { colors } from '../../common/colors'
 
 @Component({
   selector: 'notes-list',
