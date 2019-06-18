@@ -1,11 +1,11 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: "AIzaSyBo1vlTfOPhfE8jvK8WGErwqMZXAZG7yVY",
-    authDomain: "stiki-notes.firebaseapp.com",
-    databaseURL: "https://stiki-notes.firebaseio.com",
-    projectId: "stiki-notes",
-    storageBucket: "",
-    messagingSenderId: "116904629068"
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.AUTH_DOMAIN,
+    databaseURL: process.env.DB_URL,
+    projectId: process.env.PROJECT_ID,
+    storageBucket: process.env.STORAGE_BUCKET,
+    messagingSenderId: process.env.SENDER_ID
   }
 };
